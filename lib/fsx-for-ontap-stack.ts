@@ -239,9 +239,6 @@ export class FsxForOntapStack extends Stack {
             CfnDynamicReferenceService.SECRETS_MANAGER,
             `${fileSystemSecret.secretArn}:SecretString:password`
           ).toString(),
-          // fsxAdminPassword: fileSystemSecret
-          //   .secretValueFromJson("password")
-          //   .toString(),
           preferredSubnetId: isolatedSubnetIds[0],
           routeTableIds: routeTableIds,
           throughputCapacity: 128,
